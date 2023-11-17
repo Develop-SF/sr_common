@@ -10,7 +10,7 @@ string name
 int32 device_id
 
 # the time at which this actuator state was measured
-time timestamp
+builtin_interfaces/Time timestamp
 
 # the encoder position, represented by the number of encoder ticks
 int32 encoder_count

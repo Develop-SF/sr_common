@@ -1,4 +1,4 @@
-Header header
+std_msgs/Header header
 int8 set_valve_muscle_0
 int8 set_valve_muscle_1
 uint64 set_duration_muscle_0

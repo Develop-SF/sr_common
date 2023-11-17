@@ -1,5 +1,5 @@
 # Stamp when sent
-time timestamp
+builtin_interfaces/Time timestamp
 # Fields gathering both the magnetic and temperature data
 geometry_msgs/Point[] magnetic_data
 float32[] temperature_data

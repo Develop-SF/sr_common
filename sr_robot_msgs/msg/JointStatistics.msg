@@ -6,7 +6,7 @@
 string name
 
 # the time at which these joint statistics were measured
-time timestamp
+builtin_interfaces/Time timestamp
 
 # the position of the joint in radians
 float64 position

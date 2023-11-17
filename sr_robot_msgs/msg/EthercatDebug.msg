@@ -1,4 +1,4 @@
-Header               header
+std_msgs/Header               header
 
 int16[]              sensors
 FromMotorDataType    motor_data_type
