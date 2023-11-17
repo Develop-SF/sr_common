@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <!--
  Software License Agreement (BSD License)
  Copyright © 2022 belongs to Shadow Robot Company Ltd.
@@ -24,7 +25,7 @@
  software, even if advised of the possibility of such damage.
 -->
 
-<package>
+<package format="3">
   <name>sr_common</name>
   <version>0.0.0</version>
   <description>This metapackage contains the bare minimum for communicating with the Shadow Hand from a remote computer: urdf models and messages.</description>
@@ -34,13 +35,15 @@
   <license>GPL</license>
 
   <author email="ugo@shadowrobot.com">Ugo Cupcic</author>
+  <author email="matt.wang@shinfangglobal.com">Matt Wang</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>sr_description</run_depend>
-  <run_depend>sr_robot_msgs</run_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>sr_description</exec_depend>
+  <exec_depend>sr_robot_msgs</exec_depend>
 
   <export>
-    <metapackage/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>

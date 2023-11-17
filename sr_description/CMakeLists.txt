@@ -1,35 +1,29 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.10.2)
 project(sr_description)
 
-find_package(catkin REQUIRED)
+find_package(ament_cmake REQUIRED)
 
-catkin_package(
-    DEPENDS
-    CATKIN_DEPENDS
-    INCLUDE_DIRS
-    LIBRARIES
-)
+ament_package()
 
-if (CATKIN_ENABLE_TESTING)
-  find_package(urdf REQUIRED)
-
-  include_directories(${urdf_INCLUDE_DIRS})
-  catkin_add_gtest(test_sr_description_urdf test/test_sr_description_urdf.cpp)
-  target_link_libraries(test_sr_description_urdf ${urdf_LIBRARIES})
-
-endif()
+# if (BUILD_TESTING)
+#   find_package(urdf REQUIRED)
+#   find_package(ament_cmake_gtest REQUIRED)
+#   include_directories(${urdf_INCLUDE_DIRS})
+#   ament_add_gtest(test_sr_description_urdf test/test_sr_description_urdf.cpp)
+#   target_link_libraries(test_sr_description_urdf ${urdf_LIBRARIES})
+# endif()
 
 install(DIRECTORY hand/
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/hand)
+   DESTINATION share/hand)
 
 install(DIRECTORY meshes/
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes)
+   DESTINATION share/meshes)
 
 install(DIRECTORY loaders/
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/loaders)
+   DESTINATION share/loaders)
 
 install(DIRECTORY robots/
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/robots)
+   DESTINATION share/robots)
 
 install(FILES other/xacro/materials.urdf.xacro
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+   DESTINATION share)
