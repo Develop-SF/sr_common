@@ -14,16 +14,16 @@ ament_package()
 # endif()
 
 install(DIRECTORY hand/
-   DESTINATION share/hand)
+   DESTINATION share/${PROJECT_NAME}/hand)
 
 install(DIRECTORY meshes/
-   DESTINATION share/meshes)
+   DESTINATION share/${PROJECT_NAME}/meshes)
 
 install(DIRECTORY loaders/
-   DESTINATION share/loaders)
+   DESTINATION share/${PROJECT_NAME}/loaders)
 
 install(DIRECTORY robots/
-   DESTINATION share/robots)
+   DESTINATION share/${PROJECT_NAME}/robots)
 
-install(FILES other/xacro/materials.urdf.xacro
-   DESTINATION share)
+install(DIRECTORY other/
+   DESTINATION share/${PROJECT_NAME}/other)
